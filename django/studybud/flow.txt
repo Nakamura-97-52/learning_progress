@@ -1,0 +1,15 @@
+1. virtual venv 
+
+2. django-admin startproject "project_name"
+created boilplate configrations, 
+wsgi.py -> web server gi this is the web server per se
+urls.py -> sets each url configration with python list
+settings.py -> handles main configrations for the project, each apps templates static pages so on so forth
+
+
+3. python manage.py startapp "app name"
+created an app with the given name
+gives model.py views.py admin.py and so on
+
+4. let django know a new app created
+in settings.py, installed_apps, add "app_name.apps.BaseConfig"
