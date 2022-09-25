@@ -1,0 +1,23 @@
+
+
+<div class="user-container">
+    <div>
+        <h3>Brouse Topics</h3>
+        {% include 'base/topics_component.html' %}
+
+    </div>
+
+    <div>
+        <p>user</p>
+        <h3>{{user.username}}</h3>
+        <hr>
+
+
+    </div>
+
+    <div>
+        {% include 'base/activity_component.html' %}
+    </div>
+</div>
+
+{% endblock %}

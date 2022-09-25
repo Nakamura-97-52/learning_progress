@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from django.conf.urls.static import static
+from django.conf import settings
 # http stands for Hypertext Transfer Protocol
 
 # not a good practice to have every function in project/urls.py 
@@ -32,9 +34,13 @@ from django.http import HttpResponse
 
 urlpatterns = [
     # path imported abobe from django.urls
-    # it looks to link urls to functions or classes respectively
+    # it looks to link urls with functions or classes respectively
     path('admin/', admin.site.urls),
-    path('', include('base.urls'))
+    path('', include('base.urls')),
+    # if url includes api, look up for routes from 'base.api.urls'
+    path('api/', include('base.api.urls'))
     # path("", home),
     # path("room/", room),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

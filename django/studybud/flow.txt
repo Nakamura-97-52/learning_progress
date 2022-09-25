@@ -13,3 +13,29 @@ gives model.py views.py admin.py and so on
 
 4. let django know a new app created
 in settings.py, installed_apps, add "app_name.apps.BaseConfig"
+
+5. templates can be created on each app
+templates which are used every page should be under "project_name/templates"
+templates which are used in only specific app should be under "app_name/templates/app_name"
+
+6. migration
+django preped database tables in advanse for us
+we don't need create tables for default ones
+migration will be executed to activate those tables
+
+
+.API
+
+djange.rest.API
+
+import decorator,
+and response
+
+decorator is used for specifying each view methods allows which requests respectively
+response is for returning response for that url
+
+for API, we can't return python objects but dictionary(routes)
+It's where serearizer comes into play
+
+need to set allowed endpoints, using other package
+able to choose, specific endpoints/ specific endpoints with regex/ every endpoints
