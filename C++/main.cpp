@@ -4,13 +4,21 @@
 
 using namespace std;
 
-int main()
-{
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+int addSum(int first_num, int second_num){
+    int result = first_num + second_num;
+    return result;
+}
 
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
+int notmanin()
+{
+    int first_num {3};
+    int second_num {7};
+
+    std::cout << "first number" << first_num << std::endl;
+    std::cout << "second number" << second_num << std::endl;
+
+    int sum = addSum(6, 9);
+    std::cout << "sum:" << sum << std::endl; 
+
+    return 0;
 }
